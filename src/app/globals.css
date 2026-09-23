@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* React Flow canvas fills its parent without interference from body margins */
+.react-flow {
+  @apply h-full w-full;
+}
+
+/* Ensure the minimap and controls sit above the canvas background */
+.react-flow__minimap,
+.react-flow__controls {
+  z-index: 10;
+}

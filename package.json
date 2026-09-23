@@ -1,0 +1,43 @@
+{
+  "name": "postgres-plan-domain",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Strict TypeScript contracts for PostgreSQL EXPLAIN JSON plans.",
+  "exports": {
+    ".": {
+      "types": "./dist/src/domain/index.d.ts",
+      "import": "./dist/src/domain/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "build:domain": "tsc --project tsconfig.node.json",
+    "test": "npm run build:domain && node --test dist/test/postgres-plan.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "autoprefixer": "^10.5.5",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^3.0.107",
+    "@dagrejs/dagre": "^3.1.1",
+    "@xyflow/react": "^12.11.6",
+    "ai": "^6.0.276",
+    "next": "^16.3.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zustand": "^5.0.15"
+  }
+}
