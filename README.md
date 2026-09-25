@@ -63,15 +63,7 @@ Parser and ID tests only:
 npm test
 ```
 
-## Not built yet
-
-These are deliberate gaps, not silent bugs:
-
-- Exclusive time is always `null`. Subtracting child times is unsound under parallel workers and mismatched loop counts.
-- Buffer counts stay inclusive. A parent’s `"Shared Hit Blocks"` includes its descendants.
-- There is no full-tree `normalizePlan()`. The UI adapts the **clicked** node only.
-- `analyzePlan` can walk the tree; the drawer does not use it.
-- There are no tests for `analyzeNode` or `scrubSqlLiterals`.
+Exclusive time is left null. Subtracting child times is wrong under parallel workers.
 
 ## Stack
 
